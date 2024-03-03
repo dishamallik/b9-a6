@@ -73,10 +73,10 @@
             </p>
             <!-- search button -->
             <div class="bg-white rounded-full p-2 flex items-center">
-              <input type="text" placeholder="Search here anything"
-                class="bg-transparent outline-none flex px-2 text-gray-700 leading-tight focus:outline-none" />
-              <button
-                class="bg-violet-400 text-white rounded-full px-8 py-2 hover:bg-violet-600 focus:outline-none">Search</button>
+              <input id="search-field" type="text" placeholder="Search here anything"
+                    class=" bg-transparent outline-none flex px-2 text-gray-700 leading-tight focus:outline-none" />
+              <button 
+              onclick="handleSearch()"  class="bg-violet-400 text-white rounded-full px-8 py-2 hover:bg-violet-600 focus:outline-none">Search</button>
             </div>
 
 
@@ -123,9 +123,19 @@
 
       </div>
       </div>
+
+      
+
+
+
+
       <!-- music coding section -->
 
       <!-- card-1 -->
+      <section>
+        <div id="loading-spinner" class="text-center hidden">
+          <span class="loading loading-dots loading-lg"></span>
+        </div>
       
       <div class="flex flex-row">
         
@@ -217,6 +227,8 @@
 
     </div>
 
+    </section>
+
     <!-- join our forum section -->
     <div class="container mx-auto ">
       <div class="hero px-10 grid lg:grid-cols-1 md:grid-cols-1 sm:grid-cols-1  mt-5  bg-black rounded-lg text-white">
@@ -246,7 +258,8 @@
     </section>
 
     <!-- card  -->
-    <div class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1  mt-5 gap-3 ">
+    
+    <div id="buzz-container" class="flex justify-between">
       <div class="card w-96 bg-base-100 shadow-xl mb-5 lg:mb-1">
         <figure class="px-10 pt-10">
           <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes"
@@ -272,68 +285,19 @@
             </div>
           </div>
         </div>
-      </div>
+      
 
 
 
-      <div class="card  bg-base-100 shadow-xl mb-5 lg:mb-1  ">
-        <figure class="px-10 pt-10">
-          <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes"
-            class="rounded-xl" />
-        </figure>
-        <div class="card-body items-start text-start">
-          <div class="flex">
-            <img src="images/Frame (1).png" alt="">
-            <h4>29 January 2024</h4>
-          </div>
-          <h2 class="card-title">What will a mars habitat force that impact in our daily life!!!</h2>
-          <p>Yes, you can run unit tests and view the results directly within the app.</p>
-          <div class="card-actions flex">
-            <div class="avatar">
-              <div class="w-14 rounded-full">
-                <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-              </div>
-            </div>
-            <div>
-              <h3>Cameron Williamson</h3>
-              <h5>Unknown</h5>
-
-            </div>
-          </div>
-        </div>
-      </div>
+      
 
 
-      <div class="card  bg-base-100 shadow-xl mb-5 lg:mb-1">
-        <figure class="px-10 pt-10">
-          <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes"
-            class="rounded-xl" />
-        </figure>
-        <div class="card-body items-start text-start">
-          <div class="flex">
-            <img src="images/Frame (1).png" alt="">
-            <h4>29 January 2024</h4>
-          </div>
-          <h2 class="card-title">What will a mars habitat force that impact in our daily life!!!</h2>
-          <p>Yes, you can run unit tests and view the results directly within the app.</p>
-          <div class="card-actions flex">
-            <div class="avatar">
-              <div class="w-14 rounded-full">
-                <img src="" />
-              </div>
-            </div>
-            <div>
-              <h3>Cameron Williamson</h3>
-              <h5>Unknown</h5>
-
-            </div>
-          </div>
-        </div>
-      </div>
-
+      
 
 
     </div>
+    </div>
+    
 
   </main>
 

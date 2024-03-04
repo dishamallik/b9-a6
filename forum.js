@@ -1,4 +1,5 @@
 const forumLoad = async () =>{
+  toggleLoadingSpinner(true);
     const res = await fetch('https://openapi.programming-hero.com/api/retro-forum/posts');
     const data = await res.json();
     const phones = data.posts;
@@ -98,15 +99,23 @@ const forumContainer = document.getElementById('card-container');
             
   `;
 
+
+// hide spinner
+setTimeout(() =>{
+  toggleLoadingSpinner(false)
+  forumContainer.appendChild(forumCard);
+},2000);
+
+
+
 // append
-forumContainer.appendChild(forumCard);
+
 
 
     })
 
 
-    // hide spinner
-    setTimeout(toggleLoadingSpinner,1000);
+    
 
 
 
@@ -220,7 +229,17 @@ const toggleLoadingSpinner = (isLoading) =>{
 }
 
 
+let count = 0;
 
+const button = async (id) =>{
+  count ++;
+
+
+
+
+  const buttonContainer = document.getElementById('btn-container');
+  buttonContainer.innerText = count;
+}
 
 
 

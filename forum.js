@@ -43,7 +43,7 @@ const forumContainer = document.getElementById('card-container');
        
 
         <div class=" gap-5  flex justify-around" >
-        <div class="  bg-violet-100  lg:w-3/4 lg:h-auto  rounded-lg  pt-5 px-12 lg:px-10 ">
+        <div class="  bg-violet-100  lg:w-3/4 lg:h-auto  rounded-lg  pt-5  lg:px-10 ">
 
           <div class="lg:flex gap-20 ">
             <div class="avatar ">

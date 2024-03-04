@@ -50,9 +50,9 @@ const forumContainer = document.getElementById('card-container');
               <div class="w-20 h-20 rounded-xl ">
                 <img src="${phone.image}" />
                 <div class="absolute -top-2 -right-0.5 ">
-
-                  <div class="badge badge-success border-2 border-white"></div>
-
+                 ${phone.isActive ? '<div class="badge badge-success border-2 border-white"></div>' : '<div class="badge badge-error border-2 border-white"></div>' }
+                 
+               
                 </div>
 
               </div>
@@ -127,7 +127,7 @@ forumLoad2(searchText);
 
 }
 
-const buzzContainer =document.getElementById('buzz-container');
+// const buzzContainer =document.getElementById('buzz-container');
  
 
 const displayPhones = data =>{
@@ -137,33 +137,36 @@ const displayPhones = data =>{
     // console.log(data)
     data.forEach(buzz =>{
         console.log(buzz);
-       const secCard = document.getElementById('div');
+       const secCard = document.createElement('div');
        secCard.classList = `card w-96 bg-base-100 shadow-xl mb-5 lg:mb-1`;
        secCard.innerHTML = `
        
        <figure class="px-10 pt-10">
-         <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes"
-           class="rounded-xl" />
-       </figure>
-       <div class="card-body items-start text-start">
-         <div class="flex">
-           <img src="images/Frame (1).png" alt="">
-           <h4>29 January 2024</h4>
-         </div>
-         <h2 class="card-title">What will a mars habitat force that impact in our daily life!!!</h2>
-         <p>Yes, you can run unit tests and view the results directly within the app.</p>
-         <div class="card-actions flex">
-           <div class="avatar">
-             <div class="w-14 rounded-full">
-               <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-             </div>
+       <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes"
+         class="rounded-xl" />
+     </figure>
+     <div class="card-body items-start text-start">
+       <div class="flex">
+         <img src="images/Frame (1).png" alt="">
+         <h4>29 January 2024</h4>
+       </div>
+       <h2 class="card-title">What will a mars habitat force that impact in our daily life!!!</h2>
+       <p>Yes, you can run unit tests and view the results directly within the app.</p>
+       <div class="card-actions flex">
+         <div class="avatar">
+           <div class="w-14 rounded-full">
+             <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
            </div>
-           <div>
-             <h3>Cameron Williamson</h3>
-             <h5>Unknown</h5>
+         </div>
+         <div>
+           <h3>Cameron Williamson</h3>
+           <h5>Unknown</h5>
 
-           </div>
          </div>
+       </div>
+     </div>
+   
+
        `;
 
 buzzContainer.appendChild(secCard);
